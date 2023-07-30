@@ -3,6 +3,7 @@ function loadHTML(file, element) {
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById(element).innerHTML = this.responseText;
+            if (callback) callback();
         }
     };
     xhr.open("GET", file, true);

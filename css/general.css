@@ -5,15 +5,9 @@ body{
     background-color: #0F0F0F;
     color: #FFFFFF;
 }
-h1, h2, h3, h4, h5, h6, label, input ,nav ,ul ,li {
+h1, h2, h3, h4, h5, h6, section, label, input ,nav ,ul ,li {
     margin: 0;
     padding: 0;
-}
-
-#titulo{
-    text-align: center;
-    padding-bottom: 15px;
-    padding-top: 15px;
 }
 
 .boton{
@@ -33,15 +27,6 @@ h1, h2, h3, h4, h5, h6, label, input ,nav ,ul ,li {
 .boton:hover{
     background-color: #6d6d6d;
     color: white;
-}
-
-#boton_agregar {
-    position: absolute;
-    right: 5%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
 }
 
 table {
