@@ -1,25 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Horario Semanal</title>
+        <link rel="stylesheet" type="text/css" href="css/general.css">
+        <link rel="stylesheet" type="text/css" href="css/tabla.css">
+        <link rel="stylesheet" type="text/css" href="css/cabecera.css">
+        <link rel="stylesheet" type="text/css" href="css/formularios.css">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Horario Semanal</title>
-    <link rel="stylesheet" type="text/css" href="css/general.css">
-    <link rel="stylesheet" type="text/css" href="css/tabla.css">
-    <link rel="stylesheet" type="text/css" href="css/cabecera.css">
-    <link rel="stylesheet" type="text/css" href="css/formularios.css">
-</head>
+    <body>
+        <section id="Cabecera">
+            <h2 id="titulo">Horario Semanal</h2>
+            <nav>
+                <button id="boton_modificar_dias">Modificar días</button>
+                <button id="boton_modificar_horas">Modificar horas</button>
+                <button id="boton_agregar_cursos">Agregar cursos</button>
+                <button id="boton_eliminar_cursos">Eliminar cursos</button>
+                <button id="boton_descargar_imagen">Descargar imagen</button>
+                <button id="boton_guardar_horario">Guardar horario</button>
+                <button id="boton_importar_horario">Importar horario</button>
+            </nav>
+        </section>
+        
+        <section id="Formulario_modificar_dias" style="display: none;" class="Formulario">
+            <div class="Pregunta">
+                <label for="numero_dias">Cantidad de dias: </label>
+                <select id="numero_dias">
+                    <option value="5">5 dias</option>
+                    <option value="6">6 dias</option>
+                    <option value="7">7 dias</option>
+                </select>
+            </div>
+            
+            <div class="Pregunta2">
+                <button id="boton_enviar_1" class="boton">Cambiar horario</button>
+                <button id="boton_cancelar_1" class="boton">Cancelar</button>
+            </div>
+        </section>
 
-<body>
-    <section id="Cabecera"></section>
-    <section id="Formulario_modificar_dias"></section>
-    <section id="Formulario_modificar_horas"></section>
-    <section id="Formulario_agregar_cursos"></section>
-    <section id="Formulario_eliminar_cursos"></section>
-    <section id="Formulario_importar_horario"></section>
-    <section id="Tabla"></section>
-    <div id="overlay" style="display: none;"></div>
-    <script src="js/cargar_htmls.js"></script>
-</body>
+        <section id="Formulario_modificar_horas" style="display: none;" class="Formulario">
+            <div class="Pregunta">
+                <label for="hora_inicio_tabla">Hora de inicio: </label>
+                <input type="number" id="hora_inicio_tabla" min="0" max="24"><br>
+            </div>
+            
+            <div class="Pregunta">
+                <label for="hora_fin_tabla">Hora de fin: </label>
+                <input type="number" id="hora_fin_tabla" min="0" max="24"><br>
+            </div>
+            
+            <div class="Advertencia" style="display: none;">
+                <p>Formato de horas no válido</p>
+            </div>
 
+            <div class="Pregunta2">
+                <button id="boton_enviar_2" class="boton">Cambiar horario</button>
+                <button id="boton_cancelar_2" class="boton">Cancelar</button>
+            </div>
+        </section>
+
+        <section id="Formulario_agregar_cursos" style="display: none;" class="Formulario">
+            <div class="Pregunta">
+                <label for="nombre">Nombre del curso: </label>
+                <input type="text" id="nombre"><br>
+            </div>
+                
+            <div class="Pregunta">
+                <hr>
+                <p>Agregar horario</p>
+                <p><select id="dia">
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miércoles">Miércoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sábado">Sábado</option>
+                </select>
+                de<input type="number" id="hora_inicio" min="0" max="24">
+                a<input type="number" id="hora_fin" min="0" max="24"></p>
+            </div>
+                
+            <div class="Pregunta2">
+                <button id="boton_enviar_3" class="boton">Cambiar horario</button>
+                <button id="boton_cancelar_3" class="boton">Cancelar</button>
+            </div>
+        </section>
+
+        <section id="Formulario_eliminar_cursos" style="display: none;" class="Formulario">
+            <div class="Pregunta2">
+                <button id="boton_enviar_4" class="boton">Cambiar horario</button>
+                <button id="boton_cancelar_4" class="boton">Cancelar</button>
+            </div>
+        </section>
+
+        <section id="Formulario_importar_horario" style="display: none;" class="Formulario">
+            <div class="Pregunta2">
+                <button id="boton_enviar_5" class="boton">Cambiar horario</button>
+                <button id="boton_cancelar_5" class="boton">Cancelar</button>
+            </div>
+        </section>
+        
+        <section id="overlay" style="display: none;"></section>
+
+        <section id="Tabla">
+            <table id="Tabla_horario">
+                <tr>
+                    <th>Hora</th>
+                </tr>
+            </table>
+        </section>
+        <script src="js/botones_menu.js"></script>
+        <script src="js/cambiar_dias.js"></script>
+        <script src="js/cambiar_horas.js"></script>
+        
+    </body>
 </html>

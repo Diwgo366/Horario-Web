@@ -5,7 +5,13 @@ body{
     background-color: #0F0F0F;
     color: #FFFFFF;
 }
-h1, h2, h3, h4, h5, h6, section, label, input ,nav ,ul ,li {
+
+hr, p, h1, h2, h3, h4, h5, h6, section, label, input ,nav ,ul ,li {
     margin: 0;
     padding: 0;
+}
+
+hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
