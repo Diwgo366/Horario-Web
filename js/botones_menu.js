@@ -1,16 +1,8 @@
-
-// Boton para aparecer el formulario de Modificar dias
-let Modificar_dias = document.getElementById("boton_modificar_dias");
-Modificar_dias.addEventListener("click", function() {
+// Boton para aparecer el formulario de Modificar horario
+let Modificar_horario = document.getElementById("boton_modificar_horario");
+Modificar_horario.addEventListener("click", function() {
     document.getElementById("overlay").style.display = "block";
-    document.getElementById("Formulario_modificar_dias").style.display = "block";
-});
-
-// Boton para aparecer el formulario de Modificar horas
-let Modificar_horas = document.getElementById("boton_modificar_horas");
-Modificar_horas.addEventListener("click", function() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("Formulario_modificar_horas").style.display = "block";
+    document.getElementById("Formulario_modificar_horario").style.display = "block";
 });
 
 // Boton para aparecer el formulario de Agregar cursos

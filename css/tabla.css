@@ -2,15 +2,20 @@ table {
     text-align: center;
     border-collapse: collapse;
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
+    table-layout: fixed;
 }
 
-th, td {
-    border: 1px solid #ddd;
+td {
+    border: 1px solid #E6EDF3;
     padding-top: 6px;
     padding-bottom: 6px;
 }
 
-th{
-    background-color: #272727;
+tr:first-child{
+    background-color: #25262B;
+}
+
+td:first-child{
+    width: 150px;
 }

@@ -11,19 +11,21 @@
 
     <body>
         <section id="Cabecera">
-            <h2 id="titulo">Horario Semanal</h2>
             <nav>
-                <button id="boton_modificar_dias">Modificar días</button>
-                <button id="boton_modificar_horas">Modificar horas</button>
-                <button id="boton_agregar_cursos">Agregar cursos</button>
-                <button id="boton_eliminar_cursos">Eliminar cursos</button>
-                <button id="boton_descargar_imagen">Descargar imagen</button>
-                <button id="boton_guardar_horario">Guardar horario</button>
-                <button id="boton_importar_horario">Importar horario</button>
+                <div>
+                    <img src="img/calendario.png" alt="Icono">
+                    <h2 id="titulo"><b>Arma tu horario</b></h2>    
+                </div>
+                <div>
+                    <button id="boton_modificar_horario">Modificar horario</button>
+                    <button id="boton_agregar_cursos">Agregar cursos</button>
+                    <button id="boton_eliminar_cursos">Eliminar cursos</button>
+                </div>
             </nav>
         </section>
         
-        <section id="Formulario_modificar_dias" style="display: none;" class="Formulario">
+        <section id="Formulario_modificar_horario" style="display: none;" class="Formulario">
+            <div class="Subtitulos"><b>Cambiar dias</b></div>
             <div class="Pregunta">
                 <label for="numero_dias">Cantidad de dias: </label>
                 <select id="numero_dias">
@@ -32,14 +34,8 @@
                     <option value="7">7 dias</option>
                 </select>
             </div>
-            
-            <div class="Pregunta2">
-                <button id="boton_enviar_1" class="boton">Cambiar horario</button>
-                <button id="boton_cancelar_1" class="boton">Cancelar</button>
-            </div>
-        </section>
-
-        <section id="Formulario_modificar_horas" style="display: none;" class="Formulario">
+            <hr>
+            <div class="Subtitulos"><b>Cambiar horas</b></div>
             <div class="Pregunta">
                 <label for="hora_inicio_tabla">Hora de inicio: </label>
                 <input type="number" id="hora_inicio_tabla" min="0" max="24"><br>
@@ -51,12 +47,18 @@
             </div>
             
             <div class="Advertencia" style="display: none;">
-                <p>Formato de horas no válido</p>
+                <div>
+                    <img src="img/error.png" alt="Error">
+                </div>
+
+                <div>
+                    <p><b></b></p>
+                </div>
             </div>
 
             <div class="Pregunta2">
-                <button id="boton_enviar_2" class="boton">Cambiar horario</button>
-                <button id="boton_cancelar_2" class="boton">Cancelar</button>
+                <button id="boton_enviar_1" class="boton">Modificar horario</button>
+                <button id="boton_cancelar_1" class="boton">Cancelar</button>
             </div>
         </section>
 
@@ -82,22 +84,22 @@
             </div>
                 
             <div class="Pregunta2">
-                <button id="boton_enviar_3" class="boton">Cambiar horario</button>
-                <button id="boton_cancelar_3" class="boton">Cancelar</button>
+                <button id="boton_enviar_2" class="boton">Cambiar horario</button>
+                <button id="boton_cancelar_2" class="boton">Cancelar</button>
             </div>
         </section>
 
         <section id="Formulario_eliminar_cursos" style="display: none;" class="Formulario">
             <div class="Pregunta2">
-                <button id="boton_enviar_4" class="boton">Cambiar horario</button>
-                <button id="boton_cancelar_4" class="boton">Cancelar</button>
+                <button id="boton_enviar_3" class="boton">Cambiar horario</button>
+                <button id="boton_cancelar_3" class="boton">Cancelar</button>
             </div>
         </section>
 
         <section id="Formulario_importar_horario" style="display: none;" class="Formulario">
             <div class="Pregunta2">
-                <button id="boton_enviar_5" class="boton">Cambiar horario</button>
-                <button id="boton_cancelar_5" class="boton">Cancelar</button>
+                <button id="boton_enviar_4" class="boton">Cambiar horario</button>
+                <button id="boton_cancelar_4" class="boton">Cancelar</button>
             </div>
         </section>
         
@@ -106,13 +108,20 @@
         <section id="Tabla">
             <table id="Tabla_horario">
                 <tr>
-                    <th>Hora</th>
+                    <td>Hora</td>
                 </tr>
             </table>
         </section>
+
+        <section id="Botones_adicionales">
+            <nav>
+                <button id="boton_descargar_imagen" class="boton">Descargar como imagen</button>
+                <button id="boton_guardar_horario" class="boton">Guardar horario</button>
+                <button id="boton_importar_horario" class="boton">Importar horario</button>
+            </nav>
+        </section>
+
         <script src="js/botones_menu.js"></script>
-        <script src="js/cambiar_dias.js"></script>
-        <script src="js/cambiar_horas.js"></script>
-        
+        <script src="js/cambiar_horario.js"></script>        
     </body>
 </html>
