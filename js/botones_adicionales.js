@@ -51,3 +51,19 @@ Cancelar4.addEventListener("click", function() {
     document.getElementById("Formulario_importar_horario").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 });
+
+//Boton Para descargar como imagen
+let Descargar_Imagen = document.getElementById("boton_descargar_imagen");
+Descargar_Imagen.addEventListener("click", function() {
+    // Obtener el elemento de la tabla
+    let tabla = document.getElementById("Tabla_horario");
+    // Tomar una captura de pantalla del elemento de la tabla
+    html2canvas(tabla, {scale: 8}).then(canvas => {
+        // Crear un enlace para descargar la imagen
+        let enlace = document.createElement("a");
+        enlace.download = "Tabla.png";
+        enlace.href = canvas.toDataURL();
+        // Simular un clic en el enlace para descargar la imagen
+        enlace.click();
+    });
+});
