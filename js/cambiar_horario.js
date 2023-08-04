@@ -12,7 +12,9 @@ var variable = JSON.parse(localStorage.getItem("Cursos")) || [];
 //Se imprime la tabla por defecto
 for (let i = 0; i < numero_columnas; i++) {
     let celdas = primera_fila.insertCell(i + 1);
-    celdas.innerHTML = dias[i];
+    let span = document.createElement("span");
+    celdas.appendChild(span);
+    span.innerHTML = dias[i];
 }
 
 for (let i = hora_inicio_tabla; i <= hora_fin_tabla-1; i++) {

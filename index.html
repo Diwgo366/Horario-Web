@@ -136,8 +136,12 @@
         </section>
 
         <section id="Formulario_importar_horario" style="display: none;" class="Formulario">
+            <div class="Subtitulos"><b>Agregar Horario</b></div>
+            <div class="Pregunta">
+                <input type="file" id="ArchivoSubido" accept=".txt">
+            </div>
             <div class="Pregunta2">
-                <button id="boton_enviar_4" class="boton">Cambiar horario</button>
+                <button id="boton_enviar_4" class="boton" onclick="LeerArchivo()">Subir horario</button>
                 <button id="boton_cancelar_4" class="boton">Cancelar</button>
             </div>
         </section>
@@ -147,7 +151,7 @@
         <section id="Tabla">
             <table id="Tabla_horario">
                 <tr>
-                    <td>Hora</td>
+                    <td><span>Hora</span></td>
                 </tr>
             </table>
         </section>
