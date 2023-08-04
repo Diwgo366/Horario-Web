@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Horario Semanal</title>
         <link rel="stylesheet" type="text/css" href="css/general.css">
-        <link rel="stylesheet" type="text/css" href="css/tabla.css">
+        <link rel="stylesheet" type="text/css" href="css/tablas.css">
         <link rel="stylesheet" type="text/css" href="css/cabecera.css">
         <link rel="stylesheet" type="text/css" href="css/formularios.css">
     </head>
@@ -19,7 +19,7 @@
                 <div>
                     <button id="boton_modificar_horario">Modificar horario</button>
                     <button id="boton_agregar_cursos">Agregar cursos</button>
-                    <button id="boton_eliminar_cursos">Eliminar cursos</button>
+                    <button id="boton_editar_cursos">Editar cursos</button>
                 </div>
             </nav>
         </section>
@@ -128,9 +128,27 @@
             </div>
         </section>
 
-        <section id="Formulario_eliminar_cursos" style="display: none;" class="Formulario">
+        <section id="Formulario_editar_cursos" style="display: none;" class="Formulario">
+            <table id="Tabla_cursos">
+                <tr>
+                    <td><span>Curso</span></td><td><span>Color</span></td><td><span>Ocultar</span></td><td><span>Eliminar</span></td>
+                </tr>
+            </table>
+
+            <div class="Advertencia" style="display: none;">
+                <div>
+                    <img src="img/error.png" alt="Error">
+                </div>
+
+                <div>
+                    <p><b></b></p>
+                </div>
+            </div>
+            
+            <hr>
+
             <div class="Pregunta2">
-                <button id="boton_enviar_3" class="boton">Cambiar horario</button>
+                <button id="boton_enviar_3" class="boton">Editar</button>
                 <button id="boton_cancelar_3" class="boton">Cancelar</button>
             </div>
         </section>
@@ -151,7 +169,7 @@
         <section id="Tabla">
             <table id="Tabla_horario">
                 <tr>
-                    <td><span>Hora</span></td>
+                    <td><div><span>Hora</span></div></td>
                 </tr>
             </table>
         </section>
@@ -168,6 +186,7 @@
         <script src="js/botones_menu.js"></script>
         <script src="js/cambiar_horario.js"></script>  
         <script src="js/agregar_curso.js"></script> 
+        <script src="js/editar_cursos.js"></script> 
         <script src="js/botones_adicionales.js"></script>        
     </body>
 </html>

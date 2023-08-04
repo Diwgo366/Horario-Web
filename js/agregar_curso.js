@@ -19,7 +19,7 @@ function Agregar_Curso(nombre, color, horario) {
     var Curso = {
         nombre: nombre,
         color: color,
-        mostrar: true,
+        ocultar: false,
         horario: horario,
     };
     Cursos.push(Curso);

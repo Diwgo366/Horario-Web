@@ -4,6 +4,8 @@ let tabla = document.getElementById("Tabla_horario");
 let primera_fila = tabla.rows[0];
 let hora_inicio_tabla = Number(localStorage.getItem('hora_inicio_tabla')) || 6;
 let hora_fin_tabla = Number(localStorage.getItem('hora_fin_tabla'))  || 20;
+document.getElementById("hora_inicio_tabla").value = hora_inicio_tabla;
+document.getElementById("hora_fin_tabla").value = hora_fin_tabla;
 let Contenedor = document.querySelector("#Formulario_modificar_horario");
 let Elemento = Contenedor.querySelector(".Advertencia");
 let Advertencia1 = Elemento.querySelector("p b");
@@ -30,23 +32,26 @@ for (let i = hora_inicio_tabla; i <= hora_fin_tabla-1; i++) {
 
 for (let i = 0; i < variable.length; i++) {
     let curso = variable[i];
-    for (let j = 0; j < curso.horario.length; j++) {
-        let horario = curso.horario[j];
-        let diaIndex = dias.indexOf(horario.dia);
-        let filaInicio = horario.inicio - hora_inicio_tabla + 1;
-        let filaFin = horario.final - hora_inicio_tabla;
-        for (let k = filaInicio; k <= filaFin; k++) {
-            if (k >= 1 && k < tabla.rows.length && diaIndex >= 0 && diaIndex < numero_columnas) {
-                let celda = tabla.rows[k].cells[diaIndex + 1];
-                let span = document.createElement("span");
-                span.innerHTML = curso.nombre;
-                span.style.backgroundColor = curso.color;
-                span.style.color = "#25262B";
-                celda.appendChild(span);
+    if (curso.ocultar === false) {
+        for (let j = 0; j < curso.horario.length; j++) {
+            let horario = curso.horario[j];
+            let diaIndex = dias.indexOf(horario.dia);
+            let filaInicio = horario.inicio - hora_inicio_tabla + 1;
+            let filaFin = horario.final - hora_inicio_tabla;
+            for (let k = filaInicio; k <= filaFin; k++) {
+                if (k >= 1 && k < tabla.rows.length && diaIndex >= 0 && diaIndex < numero_columnas) {
+                    let celda = tabla.rows[k].cells[diaIndex + 1];
+                    let span = document.createElement("span");
+                    span.innerHTML = curso.nombre;
+                    span.style.backgroundColor = curso.color;
+                    span.style.color = "#25262B";
+                    celda.appendChild(span);
+                }
             }
         }
     }
 }
+
 
 
 
