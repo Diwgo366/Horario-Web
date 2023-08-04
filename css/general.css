@@ -6,7 +6,7 @@ body{
     color: #E6EDF3;
 }
 
-hr, p, h1, h2, h3, h4, h5, h6, section, label, input ,nav ,ul ,li, img {
+hr, p, td, tr, h1, h2, h3, h4, h5, h6, span, section, label, input ,nav ,ul ,li, img {
     margin: 0;
     padding: 0;
 }

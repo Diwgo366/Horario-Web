@@ -1,11 +1,9 @@
+/*Estilo Generales para los botones*/
 .boton{
     padding-top: 7px;
     padding-bottom: 7px;
     padding-right: 15px;
     padding-left: 15px;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
     font-size: 15px;
     border-radius: 7px;
     background-color: #343A40;
@@ -20,6 +18,7 @@
     background-color: #25262B;
 }
 
+/*Estilo para los botones extra*/
 #Botones_adicionales{
     margin-bottom: 15px;
     margin-top: 10px;
@@ -28,6 +27,27 @@
     margin-right: 5%;
 }
 
+/*Estilo del overlay*/
+#overlay {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*Estilo del separador de secciones*/
+.Formulario hr {
+    border: 0;
+    height: 1px;
+    background-color: #343A40;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Estilo General para todos los formularios*/
 .Formulario {
     z-index: 10;
     position: fixed;
@@ -40,36 +60,28 @@
     border: 1px solid #E6EDF3;
 }
 
-#overlay {
-    z-index: 5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+/*Estilo para los encabezados de los formularios*/
+.Subtitulos{
+    text-align: center;
 }
 
+/*Estilo para las preguntas del formulario*/
 .Pregunta{
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
+    width: 100%;
 }
 
-.Pregunta2{
-    text-align: center;
-    margin: auto;
-}
-
-.Formulario select {
+/*Estilo para lo datos ingresados del formulario*/
+/*Estilo para las selecciones multiples*/
+.Pregunta select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     padding-right: 10px;
     padding-left: 10px;
-}
-
-.Pregunta input,select{
+    cursor: pointer;
     text-align: center;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -77,6 +89,95 @@
     border: 1px solid #0D1117;
 }
 
+/*Estilo para los cuadros de llenado*/
+.Pregunta input{
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    border: 1px solid #0D1117;
+}
+
+/*Estilo para los cuadros de llenado de tipo numero*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Estilo para la seccion de botones*/
+.Pregunta2 {
+    display: flex;
+    width: 100%;
+}
+
+.Pregunta2 .boton {
+    text-align: center;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.Pregunta2 .boton:first-child {
+    margin-right: 5px;
+}
+
+.Pregunta2 .boton:last-child {
+    margin-left: 5px;
+}
+
+/*Estilo para el boton añadir horario*/
+.Pregunta3{
+    width: 100%;
+}
+
+.Pregunta3 .boton{
+    width: 100%;
+    border-color: #E6EDF3;
+    background-color: #0D1117;
+    border-width: 1px;
+    margin-top: 3px;
+    transition: background-color 0.1s;
+}
+
+.Pregunta3 .boton:hover{
+    background-color: #25262B;
+}
+
+/*Estilo para las secciones del formulario que se van a borrar*/
+.Pregunta4{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+/*Estilo para lo datos ingresados de esta seccion*/
+/*Estilo para las selecciones multiples*/
+.Pregunta4 select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    border: 1px solid #0D1117;
+}
+
+/*Estilo para los cuadros de llenado*/
+.Pregunta4 input{
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    border: 1px solid #0D1117;
+}
+
+/*Estilo para el mensaje de advertencia*/
 .Advertencia {
     text-align: center;
     color: #F44336;
@@ -97,25 +198,3 @@
 .Advertencia div:first-child{
     height: 30px;
 }
-
-.Subtitulos{
-    text-align: center;
-}
-
-.Subtitulos:first-child{
-    margin-top: 0px;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #343A40;
-    margin: 10px;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-

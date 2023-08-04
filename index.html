@@ -55,7 +55,7 @@
                     <p><b></b></p>
                 </div>
             </div>
-
+            <hr>
             <div class="Pregunta2">
                 <button id="boton_enviar_1" class="boton">Modificar horario</button>
                 <button id="boton_cancelar_1" class="boton">Cancelar</button>
@@ -63,15 +63,29 @@
         </section>
 
         <section id="Formulario_agregar_cursos" style="display: none;" class="Formulario">
+            
+            <div class="Subtitulos"><b>Curso</b></div>
+            
             <div class="Pregunta">
-                <label for="nombre">Nombre del curso: </label>
+                <label for="nombre">Nombre: </label>
                 <input type="text" id="nombre"><br>
             </div>
-                
+
+            <div class="Advertencia" id="Error_nombre" style="display: none;">
+                <div>
+                    <img src="img/error.png" alt="Error">
+                </div>
+
+                <div>
+                    <p><b></b></p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="Subtitulos"><b>Agregar Horario</b></div>
             <div class="Pregunta">
-                <hr>
-                <p>Agregar horario</p>
-                <p><select id="dia">
+                <p><select id="dia_1">
                     <option value="Lunes">Lunes</option>
                     <option value="Martes">Martes</option>
                     <option value="Miércoles">Miércoles</option>
@@ -79,12 +93,37 @@
                     <option value="Viernes">Viernes</option>
                     <option value="Sábado">Sábado</option>
                 </select>
-                de<input type="number" id="hora_inicio" min="0" max="24">
-                a<input type="number" id="hora_fin" min="0" max="24"></p>
+                de: <input type="number" id="hora_inicio_1" min="0" max="24">
+                a: <input type="number" id="hora_fin_1" min="0" max="24"></p>
             </div>
-                
+
+            <div class="Advertencia" id="Error_horas" style="display: none;">
+                <div>
+                    <img src="img/error.png" alt="Error">
+                </div>
+
+                <div>
+                    <p><b></b></p>
+                </div>
+            </div>
+
+            <div class="Pregunta3">
+                <button id="boton_agregar_horario" class="boton">Añadir</button>
+            </div>
+
+            <div class="Advertencia" id="Error_formulario_cursos" style="display: none;">
+                <div>
+                    <img src="img/error.png" alt="Error">
+                </div>
+
+                <div>
+                    <p><b></b></p>
+                </div>
+            </div>
+
+            <hr>
             <div class="Pregunta2">
-                <button id="boton_enviar_2" class="boton">Cambiar horario</button>
+                <button id="boton_enviar_2" class="boton">Agregar Curso</button>
                 <button id="boton_cancelar_2" class="boton">Cancelar</button>
             </div>
         </section>
@@ -118,10 +157,13 @@
                 <button id="boton_descargar_imagen" class="boton">Descargar como imagen</button>
                 <button id="boton_guardar_horario" class="boton">Guardar horario</button>
                 <button id="boton_importar_horario" class="boton">Importar horario</button>
+                <button id="boton_nuevo_horario" class="boton">Nuevo horario</button>
             </nav>
         </section>
 
         <script src="js/botones_menu.js"></script>
-        <script src="js/cambiar_horario.js"></script>        
+        <script src="js/cambiar_horario.js"></script>  
+        <script src="js/agregar_curso.js"></script> 
+        <script src="js/botones_adicionales.js"></script>        
     </body>
 </html>

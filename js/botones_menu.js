@@ -24,3 +24,14 @@ Importar_horario.addEventListener("click", function() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("Formulario_importar_horario").style.display = "block";
 });
+
+// Boton para desaparecer todo al hacer click al overlay
+let Overlay = document.getElementById("overlay");
+Overlay.addEventListener("click", function() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("Formulario_modificar_horario").style.display = "none";
+    document.getElementById("Formulario_importar_horario").style.display = "none";
+    document.getElementById("Formulario_agregar_cursos").style.display = "none";
+    document.getElementById("Formulario_eliminar_cursos").style.display = "none";
+    document.getElementById("Formulario_importar_horario").style.display = "none";
+});
