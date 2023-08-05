@@ -1,127 +1,120 @@
 /*Estilo para la tabla del horario*/
-#Tabla{
-    margin-top: 20px;
+#Tabla {
+  margin-top: 20px;
 }
-
 #Tabla table {
-    text-align: center;
-    border-collapse: collapse;
-    width: 90%;
-    margin: auto;
-    table-layout: fixed;
-    background-color: #0D1117;
+  text-align: center;
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  table-layout: fixed;
+  background-color: #0D1117;
 }
-
-#Tabla span{
-    display: block;
-    padding: 7px;
-    justify-content: center;
-    align-items: center;
+#Tabla span {
+  display: block;
+  padding: 7px;
+  justify-content: center;
+  align-items: center;
 }
-
 #Tabla td {
-    border: 1px solid #E6EDF3;
-    justify-content: center;
-    align-items: center;
+  border: 1px solid #E6EDF3;
+  justify-content: center;
+  align-items: center;
 }
-
 #Tabla tr {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
-#Tabla tr:first-child{
-    background-color: #25262B;
+#Tabla tr:first-child {
+  background-color: #25262B;
 }
 
 /* Estilo para la tabla de modificar cursos */
-
 #Tabla_cursos {
-    text-align: center;
-    border-collapse: collapse;
-    margin: auto;
-    table-layout: fixed;
+  text-align: center;
+  border-collapse: collapse;
+  margin: auto;
+  table-layout: fixed;
 }
-
 #Tabla_cursos td {
-    border: 1px solid #E6EDF3;
-    justify-content: center;
-    align-items: center;
+  border: 1px solid #E6EDF3;
+  justify-content: center;
+  align-items: center;
 }
-
 #Tabla_cursos tr {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
-#Tabla_cursos tr:first-child{
-    background-color: #25262B;
+#Tabla_cursos tr:first-child {
+  background-color: #25262B;
 }
-
-#Tabla_cursos span{
-    display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 7px;
-    margin-bottom: 7px;
+#Tabla_cursos span {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
-/* Estilos del contenido de las celdas */
-#Tabla_cursos input[type="text"]{
-    appearance: none;
-    text-align: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    border: 1px solid #0D1117;
+#Tabla_cursos input[type=text] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  border: 1px solid #0D1117;
 }
-input[type="color"] {
-    appearance: none;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    cursor: pointer;
+#Tabla_cursos input[type=color] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
 }
-
-input[type="color"]::-webkit-color-swatch-wrapper {
-    padding: 0;
+#Tabla_cursos input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  width: 30px;
+  height: 30px;
 }
-
-input[type="color"]::-webkit-color-swatch {
-    border: none;
-    border-radius: 100%;
+#Tabla_cursos input[type=color]::-webkit-color-swatch {
+  border: none;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
 }
-
-input[type="checkbox"]{
-    display: none;
+#Tabla_cursos input[type=checkbox] {
+  display: none;
 }
-
-.lbl-switch{
-    display: inline-block;
-    background-color: #E6EDF3;
-    width: 60px;
-    height: 30px;
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
-
+#Tabla_cursos .lbl-switch {
+  display: inline-block;
+  background-color: #E6EDF3;
+  border: 1px solid #0D1117;
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
 }
-
-input[type="checkbox"]:checked~ .lbl-switch::after{
-    left: 28px;
-    background-color: #010409;
+#Tabla_cursos input[type=checkbox]:checked ~ .lbl-switch::after {
+  left: 29px;
+  background-color: #010409;
 }
-
-.lbl-switch::after{
-    position: absolute;
-    content: '';
-    width: 22px;
-    height: 22px;
-    border-radius: 100%;
-    background-color: #25262B;
-    top: 4px;
-    left: 5px;
-    transition: 0.3s;
-}
+#Tabla_cursos .lbl-switch::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  background-color: #25262B;
+  top: 3px;
+  left: 7px;
+  transition: 0.3s;
+}/*# sourceMappingURL=tablas.css.map */

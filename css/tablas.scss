@@ -1,0 +1,148 @@
+//Colores para modo dark
+$Cabecera_dark: #010409;
+$Blanco_dark: #E6EDF3;
+$Sombra_dark: #25262B;
+$Fondo_dark: #0D1117;
+$Boton_dark: #343A40;
+$Switch_dark: #0F1E3D;
+$Sombra_Switch_dark: #1D4165;
+//Colores para modo light
+$Cabecera_light: #FFFFFF; //
+$Negro_light: #010409;
+$Fondo_light: #F2F2F2; //
+$Sombra_ligh: #cfc9c9;
+$Switch_light: #FDBE4A; 
+$Sombra_Switch_light: #BBDADD;
+/*Estilo para la tabla del horario*/
+#Tabla{
+    margin-top: 20px;
+
+    table {
+        text-align: center;
+        border-collapse: collapse;
+        width: 90%;
+        margin: auto;
+        table-layout: fixed;
+        background-color: $Fondo_dark;
+    }
+
+    span{
+        display: block;
+        padding: 7px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    td {
+        border: 1px solid $Blanco_dark;
+        justify-content: center;
+        align-items: center;
+    }
+
+    tr {
+        justify-content: center;
+        align-items: center;
+    }
+
+    tr:first-child{
+        background-color: $Sombra_dark;
+    }   
+}
+
+/* Estilo para la tabla de modificar cursos */
+
+#Tabla_cursos {
+    text-align: center;
+    border-collapse: collapse;
+    margin: auto;
+    table-layout: fixed;
+
+    td {
+        border: 1px solid $Blanco_dark;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    tr {
+        justify-content: center;
+        align-items: center;
+    }
+
+    tr:first-child{
+        background-color: $Sombra_dark;
+    }
+
+    span{
+        display: flex;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    input[type="text"]{
+        appearance: none;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        border-radius: 5px;
+        border: 1px solid $Fondo_dark;
+    }
+
+    input[type="color"] {
+        appearance: none;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    
+    input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+    }
+    input[type="color"]::-webkit-color-swatch {
+        border: none;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+    }
+    
+    input[type="checkbox"]{
+        display: none;
+    }
+
+    .lbl-switch{
+        display: inline-block;
+        background-color: $Blanco_dark;
+        border: 1px solid $Fondo_dark;
+        width: 60px;
+        height: 30px;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked~ .lbl-switch::after{
+        left: 29px;
+        background-color: $Cabecera_dark;
+    }
+    
+    .lbl-switch::after{
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        border-radius: 100%;
+        background-color: $Sombra_dark;
+        top: 3px;
+        left: 7px;
+        transition: 0.3s;
+    }
+}

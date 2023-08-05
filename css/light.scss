@@ -1,0 +1,137 @@
+//Colores para modo dark
+$Cabecera_dark: #010409;
+$Blanco_dark: #E6EDF3;
+$Sombra_dark: #25262B;
+$Fondo_dark: #0D1117;
+$Boton_dark: #343A40;
+$Switch_dark: #0F1E3D;
+$Sombra_Switch_dark: #1D4165;
+//Colores para modo light
+$Cabecera_light: #FFFFFF; //
+$Negro_light: #010409;
+$Fondo_light: #F2F2F2; //
+$Sombra_ligh: #cfc9c9;
+$Switch_light: #FDBE4A; 
+$Sombra_Switch_light: #BBDADD;
+
+body{
+    &.light{
+        background-color: $Fondo_light;
+        color: $Negro_light;
+
+        #Cabecera{
+            border-bottom: 0px solid black;
+            box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+            background-color: $Cabecera_light;
+            color: $Negro_light;
+            nav{
+                div{
+                    #Icono{
+                        color:$Negro_light;
+                    }
+                }
+            }
+            button{
+                background-color: $Cabecera_light;
+                color: $Negro_light;
+                transition: 0.3s ease all;
+            }
+
+            button:hover{
+                background-color: $Negro_light;
+                color: $Cabecera_light;
+            }
+
+            .switch{
+                background-color: $Sombra_Switch_light;
+                border: 1px solid $Sombra_Switch_light;
+
+                &::after{
+                    transition: 0.3s ease all;
+                    background-color: $Cabecera_light;
+                    left: unset;
+                    right: 2px;
+                }
+
+                span{
+                    transition: 0.3s ease all;
+                    text-align: center;
+                }
+
+                span:last-child{
+                    color: $Switch_light;
+                    i{
+                        display: block;
+                    }
+                }
+
+                span:first-child{
+                    color: $Sombra_Switch_light;
+                    i{
+                        display: none;
+                    }
+                }
+            }
+
+            .switch:hover{
+                background-color: #62889B;
+                border: 1px solid #62889B;
+                
+                &::after{
+                    background-color: #FAF4B6;
+                }
+
+                span:first-child{
+                    color: #62889B;
+                }
+                span:last-child{
+                    color: #F29345;
+                }
+
+            }
+        }
+
+        #Tabla{
+            table{
+                background-color: $Fondo_light;
+            }
+
+            td {
+                border: 1px solid $Negro_light;
+            }
+
+            tr:first-child{
+                color: $Cabecera_light;
+                background-color: $Boton_dark;
+            }
+        }
+
+        #Tabla_cursos {
+            td {
+                border: 1px solid $Negro_light;
+            }
+
+            tr:first-child{
+                color: $Cabecera_light;
+                background-color: $Boton_dark;
+            }
+        }
+
+        .Formulario{
+            background-color: $Fondo_light;
+            border: 1px solid $Negro_light;
+
+            .Pregunta3 {
+                .boton{
+                    color: $Negro_light;
+                    border-color: $Negro_light;
+                    background-color: $Fondo_light;
+                }
+
+                .boton:hover{
+                    background-color: $Sombra_ligh;
+                }
+            }
+        }
+    }
+}

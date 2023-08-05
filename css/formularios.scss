@@ -1,0 +1,218 @@
+//Colores para modo dark
+$Cabecera_dark: #010409;
+$Blanco_dark: #E6EDF3;
+$Sombra_dark: #25262B;
+$Fondo_dark: #0D1117;
+$Boton_dark: #343A40;
+$Switch_dark: #0F1E3D;
+$Sombra_Switch_dark: #1D4165;
+//Colores para modo light
+$Cabecera_light: #FFFFFF; //
+$Negro_light: #010409;
+$Fondo_light: #F2F2F2; //
+$Switch_light: #FDBE4A; 
+$Sombra_Switch_light: #BBDADD;
+/*Estilo Generales para los botones*/
+.boton{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 15px;
+    border-radius: 7px;
+    background-color: $Boton_dark;
+    color: $Blanco_dark;
+    border-style: solid;
+    border-width: 0px;
+    transition: background-color 0.1s;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background-color: $Sombra_dark;
+}
+
+/*Estilo para los botones extra*/
+#Botones_adicionales{
+    margin-bottom: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    i{
+        margin-right: 5px;
+        color:$Blanco_dark;
+    }
+}
+
+/*Estilo del overlay*/
+#overlay {
+    z-index: 15;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*Estilo General para todos los formularios*/
+.Formulario {
+    z-index: 20;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $Fondo_dark;
+    padding: 20px;
+    border-radius: 7px;
+    border: 1px solid $Blanco_dark;
+
+    /*Estilo del separador de secciones*/
+    hr{
+        border: 0;
+        height: 1px;
+        background-color: $Boton_dark;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /*Estilo para los encabezados de los formularios*/
+    .Subtitulos{
+        text-align: center;
+    }
+
+    /*Estilo para las preguntas del formulario*/
+    .Pregunta{
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+
+        /*Estilo para lo datos ingresados del formulario*/
+        /*Estilo para las selecciones multiples*/
+        select{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding-right: 10px;
+            padding-left: 10px;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 5px;
+            border: 1px solid $Fondo_dark;
+        }
+
+        /*Estilo para los cuadros de llenado*/
+        input{
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 5px;
+            border: 1px solid $Fondo_dark;
+        }
+
+        input[type="file"]{
+            border: none;
+        }
+
+        /*Estilo para los cuadros de llenado de tipo numero*/
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    /*Estilo para la seccion de botones*/
+    .Pregunta2 {
+        display: flex;
+        width: 100%;
+
+        .boton{
+            text-align: center;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boton:first-child {
+            margin-right: 5px;
+        }
+
+        .boton:last-child {
+            margin-left: 5px;
+        }
+    }
+
+    /*Estilo para el boton añadir horario*/
+    .Pregunta3{
+        width: 100%;
+
+        .boton{
+            width: 100%;
+            border-color: $Blanco_dark;
+            background-color: $Fondo_dark;
+            border-width: 1px;
+            margin-top: 3px;
+            transition: background-color 0.1s;
+        }
+
+        .boton:hover{
+            background-color: $Sombra_dark;
+        }
+    }
+
+    /*Estilo para las secciones del formulario que se van a borrar*/
+    .Pregunta4{
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+
+        /*Estilo para lo datos ingresados de esta seccion*/
+        /*Estilo para las selecciones multiples*/
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding-right: 10px;
+            padding-left: 10px;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 5px;
+            border: 1px solid $Fondo_dark;
+        }
+        
+        input{
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 5px;
+            border: 1px solid $Fondo_dark;
+        }
+    }
+    /*Estilo para el mensaje de advertencia*/
+    .Advertencia {
+        text-align: center;
+        color: #F44336;
+        padding: 10px;
+        margin-top: 7px;
+        margin-bottom: 5px;
+        border: 2px solid #F44336;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+
+        div:first-child{
+            margin-right: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
+

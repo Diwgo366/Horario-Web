@@ -7,19 +7,25 @@
         <link rel="stylesheet" type="text/css" href="css/tablas.css">
         <link rel="stylesheet" type="text/css" href="css/cabecera.css">
         <link rel="stylesheet" type="text/css" href="css/formularios.css">
+        <link rel="stylesheet" type="text/css" href="css/light.css">
+        <script src="https://kit.fontawesome.com/20b29f44e5.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body class="light">
         <section id="Cabecera">
             <nav>
                 <div>
-                    <img src="img/calendario.png" alt="Icono">
+                    <i class="fa-regular fa-clock" id="Icono"></i>
                     <h2 id="titulo"><b>Arma tu horario</b></h2>    
                 </div>
                 <div>
-                    <button id="boton_modificar_horario">Modificar horario</button>
-                    <button id="boton_agregar_cursos">Agregar cursos</button>
-                    <button id="boton_editar_cursos">Editar cursos</button>
+                    <button id="boton_modificar_horario"><b>Modificar horario</b></button>
+                    <button id="boton_agregar_cursos"><b>Agregar cursos</b></button>
+                    <button id="boton_editar_cursos"><b>Editar cursos</b></button>
+                    <button class="switch" id="switch">
+                        <span><i class="fa-solid fa-moon"></i></span>
+                        <span><i class="fa-solid fa-sun"></i></span>
+                    </button>
                 </div>
             </nav>
         </section>
@@ -48,7 +54,7 @@
             
             <div class="Advertencia" style="display: none;">
                 <div>
-                    <img src="img/error.png" alt="Error">
+                    <i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: #F44336;"></i>
                 </div>
 
                 <div>
@@ -73,7 +79,7 @@
 
             <div class="Advertencia" id="Error_nombre" style="display: none;">
                 <div>
-                    <img src="img/error.png" alt="Error">
+                    <i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: #F44336;"></i>
                 </div>
 
                 <div>
@@ -99,7 +105,7 @@
 
             <div class="Advertencia" id="Error_horas" style="display: none;">
                 <div>
-                    <img src="img/error.png" alt="Error">
+                    <i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: #F44336;"></i>
                 </div>
 
                 <div>
@@ -113,7 +119,7 @@
 
             <div class="Advertencia" id="Error_formulario_cursos" style="display: none;">
                 <div>
-                    <img src="img/error.png" alt="Error">
+                    <i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: #F44336;"></i>
                 </div>
 
                 <div>
@@ -137,7 +143,7 @@
 
             <div class="Advertencia" style="display: none;">
                 <div>
-                    <img src="img/error.png" alt="Error">
+                    <i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: #F44336;"></i>
                 </div>
 
                 <div>
@@ -176,10 +182,21 @@
 
         <section id="Botones_adicionales">
             <nav>
-                <button id="boton_descargar_imagen" class="boton">Descargar como imagen</button>
-                <button id="boton_guardar_horario" class="boton">Guardar horario</button>
-                <button id="boton_importar_horario" class="boton">Importar horario</button>
-                <button id="boton_nuevo_horario" class="boton">Nuevo horario</button>
+                <button id="boton_descargar_imagen" class="boton">
+                    <i class="fa-solid fa-download"></i>
+                    Descargar como imagen
+                </button>
+                <button id="boton_guardar_horario" class="boton">
+                    <i class="fa-regular fa-floppy-disk"></i>
+                    Guardar horario
+                </button>
+                <button id="boton_importar_horario" class="boton">
+                    <i class="fa-solid fa-arrow-up-from-bracket""></i> 
+                    Importar horario
+                </button>
+                <button id="boton_nuevo_horario" class="boton">
+                    <i class="fa-solid fa-plus"></i> Nuevo horario
+                </button>
             </nav>
         </section>
         

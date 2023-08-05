@@ -1,200 +1,186 @@
+@charset "UTF-8";
 /*Estilo Generales para los botones*/
-.boton{
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-right: 15px;
-    padding-left: 15px;
-    font-size: 15px;
-    border-radius: 7px;
-    background-color: #343A40;
-    color: #E6EDF3;
-    border-style: solid;
-    border-width: 0px;
-    transition: background-color 0.1s;
-    cursor: pointer;
+.boton {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 15px;
+  border-radius: 7px;
+  background-color: #343A40;
+  color: #E6EDF3;
+  border-style: solid;
+  border-width: 0px;
+  transition: background-color 0.1s;
+  cursor: pointer;
 }
 
-.boton:hover{
-    background-color: #25262B;
+.boton:hover {
+  background-color: #25262B;
 }
 
 /*Estilo para los botones extra*/
-#Botones_adicionales{
-    margin-bottom: 15px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5%;
+#Botones_adicionales {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+#Botones_adicionales i {
+  margin-right: 5px;
+  color: #E6EDF3;
 }
 
 /*Estilo del overlay*/
 #overlay {
-    z-index: 5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/*Estilo del separador de secciones*/
-.Formulario hr {
-    border: 0;
-    height: 1px;
-    background-color: #343A40;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*Estilo General para todos los formularios*/
 .Formulario {
-    z-index: 10;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #0D1117;
-    padding: 20px;
-    border-radius: 7px;
-    border: 1px solid #E6EDF3;
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0D1117;
+  padding: 20px;
+  border-radius: 7px;
+  border: 1px solid #E6EDF3;
+  /*Estilo del separador de secciones*/
+  /*Estilo para los encabezados de los formularios*/
+  /*Estilo para las preguntas del formulario*/
+  /*Estilo para la seccion de botones*/
+  /*Estilo para el boton añadir horario*/
+  /*Estilo para las secciones del formulario que se van a borrar*/
+  /*Estilo para el mensaje de advertencia*/
 }
-
-/*Estilo para los encabezados de los formularios*/
-.Subtitulos{
-    text-align: center;
+.Formulario hr {
+  border: 0;
+  height: 1px;
+  background-color: #343A40;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
-/*Estilo para las preguntas del formulario*/
-.Pregunta{
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 100%;
+.Formulario .Subtitulos {
+  text-align: center;
 }
-
-/*Estilo para lo datos ingresados del formulario*/
-/*Estilo para las selecciones multiples*/
-.Pregunta select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-right: 10px;
-    padding-left: 10px;
-    cursor: pointer;
-    text-align: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    border: 1px solid #0D1117;
+.Formulario .Pregunta {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  /*Estilo para lo datos ingresados del formulario*/
+  /*Estilo para las selecciones multiples*/
+  /*Estilo para los cuadros de llenado*/
+  /*Estilo para los cuadros de llenado de tipo numero*/
 }
-
-/*Estilo para los cuadros de llenado*/
-.Pregunta input{
-    text-align: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    border: 1px solid #0D1117;
+.Formulario .Pregunta select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  border: 1px solid #0D1117;
 }
-
-/*Estilo para los cuadros de llenado de tipo numero*/
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.Formulario .Pregunta input {
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  border: 1px solid #0D1117;
 }
-
-/*Estilo para la seccion de botones*/
-.Pregunta2 {
-    display: flex;
-    width: 100%;
+.Formulario .Pregunta input[type=file] {
+  border: none;
 }
-
-.Pregunta2 .boton {
-    text-align: center;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
+.Formulario .Pregunta input[type=number]::-webkit-outer-spin-button,
+.Formulario .Pregunta input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-
-.Pregunta2 .boton:first-child {
-    margin-right: 5px;
+.Formulario .Pregunta2 {
+  display: flex;
+  width: 100%;
 }
-
-.Pregunta2 .boton:last-child {
-    margin-left: 5px;
+.Formulario .Pregunta2 .boton {
+  text-align: center;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
-
-/*Estilo para el boton añadir horario*/
-.Pregunta3{
-    width: 100%;
+.Formulario .Pregunta2 .boton:first-child {
+  margin-right: 5px;
 }
-
-.Pregunta3 .boton{
-    width: 100%;
-    border-color: #E6EDF3;
-    background-color: #0D1117;
-    border-width: 1px;
-    margin-top: 3px;
-    transition: background-color 0.1s;
+.Formulario .Pregunta2 .boton:last-child {
+  margin-left: 5px;
 }
-
-.Pregunta3 .boton:hover{
-    background-color: #25262B;
+.Formulario .Pregunta3 {
+  width: 100%;
 }
-
-/*Estilo para las secciones del formulario que se van a borrar*/
-.Pregunta4{
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 100%;
+.Formulario .Pregunta3 .boton {
+  width: 100%;
+  border-color: #E6EDF3;
+  background-color: #0D1117;
+  border-width: 1px;
+  margin-top: 3px;
+  transition: background-color 0.1s;
 }
-
-/*Estilo para lo datos ingresados de esta seccion*/
-/*Estilo para las selecciones multiples*/
-.Pregunta4 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-right: 10px;
-    padding-left: 10px;
-    cursor: pointer;
-    text-align: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    border: 1px solid #0D1117;
+.Formulario .Pregunta3 .boton:hover {
+  background-color: #25262B;
 }
-
-/*Estilo para los cuadros de llenado*/
-.Pregunta4 input{
-    text-align: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    border: 1px solid #0D1117;
+.Formulario .Pregunta4 {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  /*Estilo para lo datos ingresados de esta seccion*/
+  /*Estilo para las selecciones multiples*/
 }
-
-/*Estilo para el mensaje de advertencia*/
-.Advertencia {
-    text-align: center;
-    color: #F44336;
-    padding: 10px;
-    margin-top: 7px;
-    margin-bottom: 5px;
-    border: 2px solid #F44336;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
+.Formulario .Pregunta4 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  border: 1px solid #0D1117;
 }
-
-.Advertencia img{
-    width: 30px;
-    margin-right: 10px;
+.Formulario .Pregunta4 input {
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  border: 1px solid #0D1117;
 }
-
-.Advertencia div:first-child{
-    height: 30px;
+.Formulario .Advertencia {
+  text-align: center;
+  color: #F44336;
+  padding: 10px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  border: 2px solid #F44336;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
 }
+.Formulario .Advertencia div:first-child {
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}/*# sourceMappingURL=formularios.css.map */

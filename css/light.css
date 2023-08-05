@@ -1,0 +1,90 @@
+body.light {
+  background-color: #F2F2F2;
+  color: #010409;
+}
+body.light #Cabecera {
+  border-bottom: 0px solid black;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+  background-color: #FFFFFF;
+  color: #010409;
+}
+body.light #Cabecera nav div #Icono {
+  color: #010409;
+}
+body.light #Cabecera button {
+  background-color: #FFFFFF;
+  color: #010409;
+  transition: 0.3s ease all;
+}
+body.light #Cabecera button:hover {
+  background-color: #010409;
+  color: #FFFFFF;
+}
+body.light #Cabecera .switch {
+  background-color: #BBDADD;
+  border: 1px solid #BBDADD;
+}
+body.light #Cabecera .switch::after {
+  transition: 0.3s ease all;
+  background-color: #FFFFFF;
+  left: unset;
+  right: 2px;
+}
+body.light #Cabecera .switch span {
+  transition: 0.3s ease all;
+  text-align: center;
+}
+body.light #Cabecera .switch span:last-child {
+  color: #FDBE4A;
+}
+body.light #Cabecera .switch span:last-child i {
+  display: block;
+}
+body.light #Cabecera .switch span:first-child {
+  color: #BBDADD;
+}
+body.light #Cabecera .switch span:first-child i {
+  display: none;
+}
+body.light #Cabecera .switch:hover {
+  background-color: #62889B;
+  border: 1px solid #62889B;
+}
+body.light #Cabecera .switch:hover::after {
+  background-color: #FAF4B6;
+}
+body.light #Cabecera .switch:hover span:first-child {
+  color: #62889B;
+}
+body.light #Cabecera .switch:hover span:last-child {
+  color: #F29345;
+}
+body.light #Tabla table {
+  background-color: #F2F2F2;
+}
+body.light #Tabla td {
+  border: 1px solid #010409;
+}
+body.light #Tabla tr:first-child {
+  color: #FFFFFF;
+  background-color: #343A40;
+}
+body.light #Tabla_cursos td {
+  border: 1px solid #010409;
+}
+body.light #Tabla_cursos tr:first-child {
+  color: #FFFFFF;
+  background-color: #343A40;
+}
+body.light .Formulario {
+  background-color: #F2F2F2;
+  border: 1px solid #010409;
+}
+body.light .Formulario .Pregunta3 .boton {
+  color: #010409;
+  border-color: #010409;
+  background-color: #F2F2F2;
+}
+body.light .Formulario .Pregunta3 .boton:hover {
+  background-color: #cfc9c9;
+}/*# sourceMappingURL=light.css.map */

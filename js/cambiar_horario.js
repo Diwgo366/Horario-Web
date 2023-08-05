@@ -11,6 +11,19 @@ let Elemento = Contenedor.querySelector(".Advertencia");
 let Advertencia1 = Elemento.querySelector("p b");
 var variable = JSON.parse(localStorage.getItem("Cursos")) || [];
 
+let ValidacionDark = localStorage.getItem("DarkMode");
+if (ValidacionDark === null){
+    localStorage.setItem("DarkMode", true);
+}
+
+let Dark2 = localStorage.getItem("DarkMode");
+if (Dark2 === "false") {
+    document.body.classList.add("light");
+} else {
+    document.body.classList.remove("light");
+}
+
+
 //Se imprime la tabla por defecto
 for (let i = 0; i < numero_columnas; i++) {
     let celdas = primera_fila.insertCell(i + 1);

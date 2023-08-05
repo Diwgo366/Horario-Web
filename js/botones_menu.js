@@ -35,3 +35,12 @@ Overlay.addEventListener("click", function() {
     document.getElementById("Formulario_editar_cursos").style.display = "none";
     document.getElementById("Formulario_importar_horario").style.display = "none";
 });
+
+let Modo = document.querySelector("#switch");
+
+Modo.addEventListener("click", () =>{
+    // Recuperar el valor actual de la variable del almacenamiento local
+    let DarkMode = localStorage.getItem("DarkMode");
+    localStorage.setItem("DarkMode", DarkMode === "true" ? false : true);
+    document.body.classList.toggle("light");
+})

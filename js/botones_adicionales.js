@@ -58,7 +58,7 @@ Descargar_Imagen.addEventListener("click", function() {
     // Obtener el elemento de la tabla
     let tabla = document.getElementById("Tabla_horario");
     // Tomar una captura de pantalla del elemento de la tabla
-    html2canvas(tabla, {scale: 8}).then(canvas => {
+    html2canvas(tabla, {scale: 6}).then(canvas => {
         // Crear un enlace para descargar la imagen
         let enlace = document.createElement("a");
         enlace.download = "Tabla.png";
