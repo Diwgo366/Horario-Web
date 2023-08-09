@@ -73,7 +73,7 @@ function ImprimirTabla(columnas,inicio,fin,cursos){
         let celdas = filas.insertCell(-1);
         let span = document.createElement("span");
         celdas.appendChild(span);
-        span.innerHTML = i + ":00 - " + (i + 1) + ":00";
+        span.innerHTML = Number(i) + ":00 - " + (Number(i) + 1) + ":00";
         for (let j = 0; j < columnas; j++) {
             filas.insertCell(-1);
         }

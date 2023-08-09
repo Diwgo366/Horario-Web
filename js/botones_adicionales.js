@@ -62,7 +62,7 @@ Descargar_Imagen.addEventListener("click", function() {
     html2canvas(tabla, {scale: 6}).then(canvas => {
         // Crear un enlace para descargar la imagen
         let enlace = document.createElement("a");
-        enlace.download = "Tabla.png";
+        enlace.download = "Horario.png";
         enlace.href = canvas.toDataURL();
         // Simular un clic en el enlace para descargar la imagen
         enlace.click();

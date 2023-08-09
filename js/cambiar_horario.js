@@ -45,7 +45,17 @@ CambiarHorario.addEventListener("click",function(){
     hora_fin_tabla = parseInt(document.getElementById("hora_fin_tabla").value);
     Elemento.style.display = "none";
 
-    if (hora_inicio_tabla != null && hora_fin_tabla != null){
+    let inputshora = Contenedor.querySelectorAll("input[type='number']");
+    let vaciohorario = true;
+    // Se itera para revisar si alguna casilla esta vacia
+    for (let i = 0; i < inputshora.length; i++) {
+        if (inputshora[i].value === "") {
+            vaciohorario = false;
+            break;
+        }
+    }
+
+    if (vaciohorario){
         if (hora_inicio_tabla >= 0 && hora_inicio_tabla <= 24 && hora_fin_tabla >= 0 && hora_fin_tabla <= 24 && hora_fin_tabla >= hora_inicio_tabla) {
             //Se guardan las variables si son validas-
             localStorage.setItem('numero_columnas', numero_columnas);
