@@ -1,47 +1,21 @@
+//Botones de interaccion
 let AgregarCurso = document.querySelector("#boton_enviar_2");
 let Cancelar2 = document.querySelector("#boton_cancelar_2");
 let AgregarHorario = document.querySelector("#boton_agregar_horario");
 
 //Elementos de advertencia
 let Contenedor2 = document.querySelector("#Formulario_agregar_cursos");
+//Del nombre del curso
 let Elemento_nombre = Contenedor2.querySelector("#Error_nombre");
 let Advertencia_nombre = Elemento_nombre.querySelector("p b");
+//De las horas del curso
 let Elemento_horas = Contenedor2.querySelector("#Error_horas");
 let Advertencia_horas = Elemento_horas.querySelector("p b");
+//Del formulario en general
 let Elemento_formulario = Contenedor2.querySelector("#Error_formulario_cursos");
 let Advertencia_formulario = Elemento_formulario.querySelector("p b");
 
-var Cursos = JSON.parse(localStorage.getItem("Cursos")) || [];
-var turnos = 1;
-
-//Agregar funciones
-function Agregar_Curso(nombre, color, horario) {
-    var Curso = {
-        nombre: nombre,
-        color: color,
-        ocultar: false,
-        horario: horario,
-    };
-    Cursos.push(Curso);
-}
-
-function Agregar_horario(dia, HoraInicio, HoraFinal) {
-    return {
-        dia: dia,
-        inicio: HoraInicio,
-        final: HoraFinal,
-    };
-}
-
-function color_aleatorio() {
-    const colores = ["#FFA07A", "#20B2AA", "#87CEFA", "#778899", "#FFB6C1", "#FFA500", "#6A5ACD", "#00FF7F", "#FFD700", "#BA55D3",
-    "#FF6347", "#3CB371", "#1E90FF", "#696969", "#FF69B4", "#FF8C00", "#483D8B", "#00FA9A", "#DAA520", "#9370DB",
-    "#DC143C", "#2E8B57", "#4169E1", "#808080", "#FF1493", "#FF4500", "#000080", "#008000", "#B8860B", "#8A2BE2"];
-
-    const indiceAleatorio = Math.floor(Math.random() * colores.length);
-    return colores[indiceAleatorio];
-}
-
+let turnos = 1;
 
 AgregarHorario.addEventListener("click", function() {
     let Contenedor3 = document.getElementById("Formulario_agregar_cursos")
@@ -98,8 +72,6 @@ AgregarHorario.addEventListener("click", function() {
     }
 });
 
-
-
 AgregarCurso.addEventListener("click", function() {
     let Contenedor3 = document.getElementById("Formulario_agregar_cursos")
     let inputs = Contenedor3.querySelectorAll("input[type='number']");
@@ -133,8 +105,11 @@ AgregarCurso.addEventListener("click", function() {
     let nombre = document.querySelector('#nombre').value;
 
     if (nombre != "" && vacio && error === false && fueraDeRango === false ){
+        //Variable de cursos
+        let Cursos = JSON.parse(localStorage.getItem("Cursos")) || [];
         // Se agrega el curso a los cursos del horario
         let Curso_Horario = [];
+        console.log(Curso_Horario);
         // Se establece los horarios del curso
         for (let i = 1; i <= turnos; i++) {
             let hora_inicio = Number(document.querySelector("#hora_inicio_"+i).value);
@@ -143,17 +118,26 @@ AgregarCurso.addEventListener("click", function() {
             Curso_Horario.push(Agregar_horario(dia, hora_inicio, hora_fin));
         };
         // Se guarda en cursos el curso con su respectivo horario
-        Agregar_Curso(nombre, color_aleatorio(), Curso_Horario)
+        Agregar_Curso(Cursos, nombre, color_aleatorio(), Curso_Horario)
         // Se almacena en local los cursos
-        let Cursos_String= JSON.stringify(Cursos);
-        //Borrar todos los elementos de la clase Pregunta4
-        location.reload();
-
-        turnos = 1;
+        let Cursos_String = JSON.stringify(Cursos);
         localStorage.setItem("Cursos", Cursos_String);
+        //Borrar todos los elementos de la clase Pregunta4
+        var Elementos_Borrar = document.querySelectorAll(".Pregunta4");
+        for (let i = 0; i < Elementos_Borrar.length; i++) {
+            Elementos_Borrar[i].parentNode.removeChild(Elementos_Borrar[i]);
+        }
+
+        //Se actualiza la tabla principal
+        cursos_variable = JSON.parse(localStorage.getItem("Cursos")) || [];
+        BorrarTabla();
+        ImprimirTabla(numero_columnas,hora_inicio_tabla,hora_fin_tabla,cursos_variable);
+        //Se actualiza la tabla de modificar
+        BorrarTablaCursos()
+        CrearTablaCursos(cursos_variable)
+        turnos = 1;
         document.getElementById("Formulario_agregar_cursos").style.display = "none";
         document.getElementById("overlay").style.display = "none";
-        
     } else {
         if (vacio === false){
             Elemento_horas.style.display = "flex";
@@ -180,6 +164,7 @@ AgregarCurso.addEventListener("click", function() {
 });
 
 Cancelar2.addEventListener("click", function() {
+    turnos = 1
     document.getElementById("Formulario_agregar_cursos").style.display = "none";
     document.getElementById("overlay").style.display = "none";
     Elemento_nombre.style.display = "none";

@@ -31,35 +31,30 @@ body{
                     }
                 }
             }
-            button{
+
+            .boton-cabecera{
                 background-color: $Cabecera_light;
                 color: $Negro_light;
-                transition: 0.3s ease all;
             }
 
-            button:hover{
+            .boton-cabecera:hover{
                 background-color: $Negro_light;
                 color: $Cabecera_light;
             }
 
             .switch{
                 background-color: $Sombra_Switch_light;
-                border: 1px solid $Sombra_Switch_light;
+                transition: all 0.3s;
 
                 &::after{
-                    transition: 0.3s ease all;
                     background-color: $Cabecera_light;
                     left: unset;
                     right: 2px;
                 }
 
-                span{
-                    transition: 0.3s ease all;
-                    text-align: center;
-                }
-
                 span:last-child{
                     color: $Switch_light;
+                    
                     i{
                         display: block;
                     }
@@ -67,6 +62,7 @@ body{
 
                 span:first-child{
                     color: $Sombra_Switch_light;
+
                     i{
                         display: none;
                     }
@@ -75,7 +71,6 @@ body{
 
             .switch:hover{
                 background-color: #62889B;
-                border: 1px solid #62889B;
                 
                 &::after{
                     background-color: #FAF4B6;

@@ -36,6 +36,7 @@ function LeerArchivo() {
     };
     reader.readAsText(Archivo);
 }
+
 //Asignacion de los botones internos
 //Boton Enviar
 let Importar_Horario = document.getElementById("boton_enviar_4");

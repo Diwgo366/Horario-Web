@@ -18,6 +18,7 @@ Editar_cursos.addEventListener("click", function() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("Formulario_editar_cursos").style.display = "block";
 });
+
 // Boton para aparecer el formulario de Exportar Horarios
 let Importar_horario = document.getElementById("boton_importar_horario");
 Importar_horario.addEventListener("click", function() {
@@ -36,8 +37,8 @@ Overlay.addEventListener("click", function() {
     document.getElementById("Formulario_importar_horario").style.display = "none";
 });
 
+// Boton para cambiar el modo de oscuro
 let Modo = document.querySelector("#switch");
-
 Modo.addEventListener("click", () =>{
     // Recuperar el valor actual de la variable del almacenamiento local
     let DarkMode = localStorage.getItem("DarkMode");

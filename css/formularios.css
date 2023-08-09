@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/*Estilo Generales para los botones*/
 .boton {
   padding-top: 7px;
   padding-bottom: 7px;
@@ -19,6 +19,7 @@
   background-color: #25262B;
 }
 
+/*Estilo para los botones extra*/
 #Botones_adicionales {
   margin-bottom: 15px;
   margin-top: 10px;
@@ -31,6 +32,7 @@
   color: #E6EDF3;
 }
 
+/*Estilo del overlay*/
 #overlay {
   z-index: 15;
   position: fixed;
@@ -41,6 +43,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*Estilo General para todos los formularios*/
 .Formulario {
   z-index: 20;
   position: fixed;
@@ -51,6 +54,13 @@
   padding: 20px;
   border-radius: 7px;
   border: 1px solid #E6EDF3;
+  /*Estilo del separador de secciones*/
+  /*Estilo para los encabezados de los formularios*/
+  /*Estilo para las preguntas del formulario*/
+  /*Estilo para la seccion de botones*/
+  /*Estilo para el boton añadir horario*/
+  /*Estilo para las secciones del formulario que se van a borrar*/
+  /*Estilo para el mensaje de advertencia*/
 }
 .Formulario hr {
   border: 0;
@@ -67,6 +77,10 @@
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
+  /*Estilo para lo datos ingresados del formulario*/
+  /*Estilo para las selecciones multiples*/
+  /*Estilo para los cuadros de llenado*/
+  /*Estilo para los cuadros de llenado de tipo numero*/
 }
 .Formulario .Pregunta select {
   -webkit-appearance: none;
@@ -131,6 +145,9 @@
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
+  /*Estilo para lo datos ingresados de esta seccion*/
+  /*Estilo para las selecciones multiples*/
+  /*Estilo para los cuadros de llenado de tipo numero*/
 }
 .Formulario .Pregunta4 select {
   -webkit-appearance: none;
@@ -151,6 +168,11 @@
   padding-bottom: 3px;
   border-radius: 5px;
   border: 1px solid #0D1117;
+}
+.Formulario .Pregunta4 input[type=number]::-webkit-outer-spin-button,
+.Formulario .Pregunta4 input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .Formulario .Advertencia {
   text-align: center;

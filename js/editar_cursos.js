@@ -1,55 +1,10 @@
-let Tabla_cursos = document.getElementById("Tabla_cursos");
 var cursos_modificar = JSON.parse(localStorage.getItem("Cursos")) || [];
+let Tabla_cursos = document.getElementById("Tabla_cursos");
 let Contenedor4 = document.querySelector("#Formulario_editar_cursos");
 let Elemento4 = Contenedor4.querySelector(".Advertencia");
 let Advertencia4 = Elemento4.querySelector("p b");
 
-// Creación del formulario para editar los cursos
-if (cursos_modificar.length === 0) {
-    let fila = Tabla_cursos.insertRow();
-    for (let i = 1;i < 5; i++){
-        let celda1 = fila.insertCell();
-        let span = document.createElement("span");
-        celda1.appendChild(span);
-        span.innerHTML = "Sin datos";
-    }
-} else {
-    for (let i = 0; i < cursos_modificar.length; i++) {
-        let curso = cursos_modificar[i];
-        let fila = Tabla_cursos.insertRow();
-        let celda1 = fila.insertCell();
-        let celda2 = fila.insertCell();
-        let celda3 = fila.insertCell();
-        let celda4 = fila.insertCell();
-
-        celda1.innerHTML = `<span><input type="text" value="${curso.nombre}"></span>`;
-        celda2.innerHTML = `<span><input type="color" value="${curso.color}"></span>`;
-        celda3.innerHTML = `<span><input type="checkbox" id="btn-switch${(i+1)}" ${curso.ocultar ? "checked" : ""}><label class="lbl-switch" for="btn-switch${(i+1)}" ></label></span>`;
-        celda4.innerHTML = `<span><button class='boton'>Eliminar</button></span>`;
-        // Crear un elemento de entrada oculto para almacenar el estado de eliminación
-        let oculto = document.createElement("input");
-        oculto.type = "hidden";
-        oculto.className = "input-oculto";
-        oculto.value = "false";
-        fila.appendChild(oculto);
-    };
-    // Agregar evento de clic al botón "Eliminar" en cada fila
-    let eliminarBotones = document.querySelectorAll("#Tabla_cursos .boton");
-    eliminarBotones.forEach(function(boton) {
-        boton.addEventListener("click", function() {
-            let fila = this.parentElement.parentElement.parentElement;
-            let inputOculto = fila.querySelector(".input-oculto");
-            // Obtener el elemento de entrada oculto y alternar su valor
-            if (inputOculto.value === "true") {
-                inputOculto.value = "false";
-                fila.style.backgroundColor = "";
-            } else {
-                inputOculto.value = "true";
-                fila.style.backgroundColor = "#8B0000";
-            }
-        });
-    });
-}
+CrearTablaCursos(cursos_modificar)
 
 let Cancelar3 = document.getElementById("boton_cancelar_3");
 Cancelar3.addEventListener("click", function() {
@@ -62,52 +17,8 @@ Cancelar3.addEventListener("click", function() {
     }
 
     cursos_modificar = JSON.parse(localStorage.getItem("Cursos")) || [];
-    
-    if (cursos_modificar.length === 0) {
-        let fila = Tabla_cursos.insertRow();
-        for (let i = 1;i < 5; i++){
-            let celda1 = fila.insertCell();
-            let span = document.createElement("span");
-            celda1.appendChild(span);
-            span.innerHTML = "Sin datos";
-        }
-    } else {
-        for (let i = 0; i < cursos_modificar.length; i++) {
-            let curso = cursos_modificar[i];
-            let fila = Tabla_cursos.insertRow();
-            let celda1 = fila.insertCell();
-            let celda2 = fila.insertCell();
-            let celda3 = fila.insertCell();
-            let celda4 = fila.insertCell();
-    
-            celda1.innerHTML = `<span><input type="text" value="${curso.nombre}"></span>`;
-            celda2.innerHTML = `<span><input type="color" value="${curso.color}"></span>`;
-            celda3.innerHTML = `<span><input type="checkbox" id="btn-switch${(i+1)}" ${curso.ocultar ? "checked" : ""}><label class="lbl-switch" for="btn-switch${(i+1)}" ></label></span>`;
-            celda4.innerHTML = `<span><button class='boton'>Eliminar</button></span>`;
-            // Crear un elemento de entrada oculto para almacenar el estado de eliminación
-            let oculto = document.createElement("input");
-            oculto.type = "hidden";
-            oculto.className = "input-oculto";
-            oculto.value = "false";
-            fila.appendChild(oculto);
-        };
-        // Agregar evento de clic al botón "Eliminar" en cada fila
-        let eliminarBotones = document.querySelectorAll("#Tabla_cursos .boton");
-        eliminarBotones.forEach(function(boton) {
-            boton.addEventListener("click", function() {
-                let fila = this.parentElement.parentElement.parentElement;
-                let inputOculto = fila.querySelector(".input-oculto");
-                // Obtener el elemento de entrada oculto y alternar su valor
-                if (inputOculto.value === "true") {
-                    inputOculto.value = "false";
-                    fila.style.backgroundColor = "";
-                } else {
-                    inputOculto.value = "true";
-                    fila.style.backgroundColor = "#8B0000";
-                }
-            });
-        });
-    }
+    BorrarTablaCursos()
+    CrearTablaCursos(cursos_modificar)
     document.getElementById("Formulario_editar_cursos").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 });
@@ -145,8 +56,19 @@ Actualizar_Cursos.addEventListener("click", function() {
         cursos_modificar = cursos_actualizados;
         // Actualizar el almacenamiento local
         localStorage.setItem("Cursos", JSON.stringify(cursos_modificar));
+        
+        //Se actualiza la tabla principal
+        numero_columnas = localStorage.getItem("numero_columnas") || 5;
+        hora_inicio_tabla = localStorage.getItem("hora_inicio_tabla")  || 6;
+        hora_fin_tabla = localStorage.getItem("hora_fin_tabla") || 20;
+        cursos_variable = JSON.parse(localStorage.getItem("Cursos")) || [];
+        BorrarTabla();
+        ImprimirTabla(numero_columnas,hora_inicio_tabla,hora_fin_tabla,cursos_variable);
+        //Se actualiza la tabla de modificar
+        BorrarTablaCursos()
+        CrearTablaCursos(cursos_variable)
+        //Se oculta el formulario
         document.getElementById("Formulario_editar_cursos").style.display = "none";
         document.getElementById("overlay").style.display = "none";
-        location.reload();
     }
 });

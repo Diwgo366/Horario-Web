@@ -1,3 +1,4 @@
+/*Estilo para la tabla del horario*/
 #Tabla {
   margin-top: 20px;
 }
@@ -28,6 +29,7 @@
   background-color: #25262B;
 }
 
+/* Estilo para la tabla de modificar cursos */
 #Tabla_cursos {
   text-align: center;
   border-collapse: collapse;

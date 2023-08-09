@@ -2,7 +2,9 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Horario Semanal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/Icono-32px.png">
+        <title> Genera tu horario online</title>
         <link rel="stylesheet" type="text/css" href="css/general.css">
         <link rel="stylesheet" type="text/css" href="css/tablas.css">
         <link rel="stylesheet" type="text/css" href="css/cabecera.css">
@@ -16,12 +18,12 @@
             <nav>
                 <div>
                     <i class="fa-regular fa-clock" id="Icono"></i>
-                    <h2 id="titulo"><b>Arma tu horario</b></h2>    
+                    <h2 id="titulo"><b>Genera tu horario online</b></h2>    
                 </div>
                 <div>
-                    <button id="boton_modificar_horario"><b>Modificar horario</b></button>
-                    <button id="boton_agregar_cursos"><b>Agregar cursos</b></button>
-                    <button id="boton_editar_cursos"><b>Editar cursos</b></button>
+                    <button id="boton_modificar_horario" class="boton-cabecera"><b>Modificar horario</b></button>
+                    <button id="boton_agregar_cursos" class="boton-cabecera"><b>Agregar cursos</b></button>
+                    <button id="boton_editar_cursos" class="boton-cabecera"><b>Editar cursos</b></button>
                     <button class="switch" id="switch">
                         <span><i class="fa-solid fa-moon"></i></span>
                         <span><i class="fa-solid fa-sun"></i></span>
@@ -201,6 +203,7 @@
         </section>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+        <script src="js/funciones.js"></script>
         <script src="js/botones_menu.js"></script>
         <script src="js/cambiar_horario.js"></script>  
         <script src="js/agregar_curso.js"></script> 

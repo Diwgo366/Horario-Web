@@ -11,28 +11,22 @@ body.light #Cabecera {
 body.light #Cabecera nav div #Icono {
   color: #010409;
 }
-body.light #Cabecera button {
+body.light #Cabecera .boton-cabecera {
   background-color: #FFFFFF;
   color: #010409;
-  transition: 0.3s ease all;
 }
-body.light #Cabecera button:hover {
+body.light #Cabecera .boton-cabecera:hover {
   background-color: #010409;
   color: #FFFFFF;
 }
 body.light #Cabecera .switch {
   background-color: #BBDADD;
-  border: 1px solid #BBDADD;
+  transition: all 0.3s;
 }
 body.light #Cabecera .switch::after {
-  transition: 0.3s ease all;
   background-color: #FFFFFF;
   left: unset;
   right: 2px;
-}
-body.light #Cabecera .switch span {
-  transition: 0.3s ease all;
-  text-align: center;
 }
 body.light #Cabecera .switch span:last-child {
   color: #FDBE4A;
@@ -48,7 +42,6 @@ body.light #Cabecera .switch span:first-child i {
 }
 body.light #Cabecera .switch:hover {
   background-color: #62889B;
-  border: 1px solid #62889B;
 }
 body.light #Cabecera .switch:hover::after {
   background-color: #FAF4B6;
